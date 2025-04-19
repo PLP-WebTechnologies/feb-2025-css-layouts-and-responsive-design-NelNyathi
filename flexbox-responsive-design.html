@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 1rem;
+    }
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+    }
+    nav ul li {
+      color: white;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+    nav ul li a:hover {
+      background-color: #444;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 1rem;
+      margin-right: 1rem;
+      background-color: #f4f4f4;
+    }
+
+    .sidebar {
+      width: 300px;
+      padding: 1rem;
+      background-color: #e0e0e0;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .main-content {
+        margin-right: 0;
+      }
+    }
+
+    
+    @media (min-width: 901px) {
+      .container {
+        flex-direction: row;
+      }
+      .sidebar {
+        width: 300px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="main-content">
+      <h1>Main Content Area</h1>
+      <p>This is where the main content goes. You can add any text, images, or other media here.</p>
+    </div>
+
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This is the sidebar content. It will adjust based on screen size.</p>
+    </div>
+  </div>
+
+</body>
+</html>
